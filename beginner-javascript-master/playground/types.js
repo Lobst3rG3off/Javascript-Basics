@@ -79,10 +79,42 @@ teller.last = null;
 
 */
 
-let isDrawing = false;
-let age = 18;
-const ofAge = age > 19;
-console.log(ofAge);
+// let isDrawing = false;
+// let age = 18;
+// const ofAge = age > 19;
+// console.log(ofAge);
+
+// age = 100;
+// let age2 = 100;
+
+
+// const name = 'Geoff';
+// const middle = 'David';
+// const last = `Grossman`;
+
+// const age = 100
+// const name = "Geoff"
+
+// const smarties = 20;
+// const kids = 3;
+// const dadGets = smarties % kids;
+
+// const eachKidGets = Math.floor(smarties / kids);
+// console.log(`Each Kid Gets ${eachKidGets} smarties`);
+
+// % means remainder
+
+// const person = {
+//   first: 'Geoff',
+//   last: 'Grossman',
+//   age: 34
+// };
+
+// const somethingUndefined;
+// const somethingNull = null;
 
 age = 100;
-let age2 = 100;
+age2 = 100;
+//=== will check if the value of both sides are the same and the type are the same.
+
+//== will check value but not type.
