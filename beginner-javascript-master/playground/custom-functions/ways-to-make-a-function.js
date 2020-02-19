@@ -91,5 +91,13 @@
 // };
 
 // arrow functions are annon, you have to put them into a function expression below is an example of an implicit return
-const inchToCM = (inches) => inches * 2.54;
+const inchToCM = inches => inches * 2.54;
+
+// function add(a, b = 3) {
+//   const total = a + b;
+//   return total;
+// }
+
+const add = (a, b = 3) => a + b;
+
 
