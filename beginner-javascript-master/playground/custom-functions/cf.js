@@ -50,5 +50,14 @@ function sayHiTo(firstName) {
   return `Hello ${firstName}`;
 }
 
-const greeting = sayHiTo('Bob');
-console.log(greeting);
+// const greeting = sayHiTo('Bob');
+// console.log(greeting);
+
+// you can pass the same params because of scope and use the returned values to pass into other functions.
+function doctorize(name) {
+  return `Dr.${name}`;
+}
+
+function yell(name) {
+    return `HEY ${name.toUpperCase()}`;
+}
