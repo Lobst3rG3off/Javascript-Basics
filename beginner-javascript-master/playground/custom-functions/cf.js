@@ -30,18 +30,25 @@
 // const myBill4 = calculateBill(100, undefined, 0.2);
 // console.log(myBill4);
 
+// eslint-disable-next-line spaced-comment
 //function definition
-function calculateBill() {
-    //this is the function body
-    console.log('Running calculate bill')
-const total = 100 * 1.13; 
-console.log(total)
-return total;
 
-};
+function calculateBill(billAmount, taxRate) {
+  // this is the function body
+  console.log('Running calculate bill');
+  const total = billAmount * (1 + taxRate);
+  return total;
+}
 
-//function call
-const myTotal = calculateBill();
+// function call
+// const myTotal = calculateBill(100, 0.13);
+// const myTotal2 = calculateBill(200, 0.13);
+// console.log(myTotal, myTotal2);
 
-console.log(`Your total is $${myTotal}`);
-console.log(`Your total is a $${calculateBill()}`);
+// function definition
+function sayHiTo(firstName) {
+  return `Hello ${firstName}`;
+}
+
+const greeting = sayHiTo('Bob');
+console.log(greeting);
