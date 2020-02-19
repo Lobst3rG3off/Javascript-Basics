@@ -34,7 +34,6 @@
 
 // const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });
 
-
 // // IIFE
 // // Immediately Invoked Function Expression
 
@@ -77,3 +76,20 @@
 //   console.log('DONE! Time to eat!');
 // }, 1000);
 
+// function declaration
+// function doctorize(firstName) {
+//   return `Dr.${firstName}`;
+// }
+// anon function
+//  function (firstName) {
+//      return `Dr.${firstName}`;
+//    }
+
+// function Expression Puts a function into a variable definition.
+const doctorize = function(firstName) {
+  return `Dr.${firstName}`;
+};
+
+const doctorize2 = function (firstName) {
+  return `Dr.${firstName}`;
+};
