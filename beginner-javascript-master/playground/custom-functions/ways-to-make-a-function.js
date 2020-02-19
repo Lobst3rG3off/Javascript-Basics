@@ -86,10 +86,10 @@
 //    }
 
 // function Expression Puts a function into a variable definition.
-const doctorize = function(firstName) {
-  return `Dr.${firstName}`;
-};
+// const doctorize = function(firstName) {
+//   return `Dr.${firstName}`;
+// };
 
-const doctorize2 = function (firstName) {
-  return `Dr.${firstName}`;
-};
+// arrow functions are annon, you have to put them into a function expression below is an example of an implicit return
+const inchToCM = (inches) => inches * 2.54;
+
