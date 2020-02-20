@@ -122,20 +122,19 @@ const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });
 const wes = {
   name: 'Wes Bos',
   // long way method
-  sayHi: function() {
+  sayHi() {
     console.log('Hey Wes');
     return 'Hey Wes!';
   },
-  //short hand method
+  // short hand method
   yellHi() {
-    console.log('Hey WESSS')
+    console.log('Hey WESSS');
   },
   // Arrow Function
   whisperHi: () => {
-    console.log('Im whispering Stupid')
+    console.log('Im whispering Stupid');
   },
 };
-
 
 // callback functions
 // click callback
@@ -147,12 +146,12 @@ function handleClick() {
   console.log('Great Clicking');
 }
 button.addEventListener('click', function() {
-   console.log('Nice Job!');
+  console.log('Nice Job!');
 });
 
 // callback functions are ones that are passed back and called by the browser at a later point. In this case it waits for the button to click to fire off the anon function.
 
 // timer callback
 setTimeout(function() {
-  console.log('time to eat!')
+  console.log('time to eat!');
 }, 1000);
