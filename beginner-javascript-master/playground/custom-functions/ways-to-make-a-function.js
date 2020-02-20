@@ -98,6 +98,61 @@ const inchToCM = inches => inches * 2.54;
 //   return total;
 // }
 
-const add = (a, b = 3) => a + b;
+// const add = (a, b = 3) => a + b;
+
+// returning an object
+
+// function makeABaby(first, last) {
+//   const baby = {
+//     name: `${first} ${last}`,
+//     age: 0,
+//   };
+//   return baby;
+// }
+
+const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });
+
+// iife immedately invoked function expression
+
+(function(age) {
+  return `You are cool and age ${age}`;
+})(10);
+
+// methods!!
+const wes = {
+  name: 'Wes Bos',
+  // long way method
+  sayHi: function() {
+    console.log('Hey Wes');
+    return 'Hey Wes!';
+  },
+  //short hand method
+  yellHi() {
+    console.log('Hey WESSS')
+  },
+  // Arrow Function
+  whisperHi: () => {
+    console.log('Im whispering Stupid')
+  },
+};
 
 
+// callback functions
+// click callback
+
+const button = document.querySelector('.clickMe');
+console.log(button);
+
+function handleClick() {
+  console.log('Great Clicking');
+}
+button.addEventListener('click', function() {
+   console.log('Nice Job!');
+});
+
+// callback functions are ones that are passed back and called by the browser at a later point. In this case it waits for the button to click to fire off the anon function.
+
+// timer callback
+setTimeout(function() {
+  console.log('time to eat!')
+}, 1000);
