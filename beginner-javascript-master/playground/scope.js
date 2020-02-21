@@ -1,15 +1,19 @@
-const age = 100;
+// const age = 100;
 
-function go() {
-  const myAge = 200;
-  const hair = 'blonde';
-  console.log(age);
-  console.log(myAge);
-  console.log(hair);
-}
+// function go() {
+//   const myAge = 200;
+//   const hair = 'blonde';
+//   console.log(age);
+//   console.log(myAge);
+//   console.log(hair);
+// }
 
-go();
+// go();
 /* eslint-disable*/
+// let cool; 
+// if (1 === 1) {
+//  cool = true;
+// }
 
 // function isCool(name) {
 //   if (name === 'wes') {
@@ -18,6 +22,8 @@ go();
 //   console.log(cool);
 //   return cool;
 // }
+
+
 
 // for(let i = 0; i < 10; i++) {
 //   console.log(i);
@@ -31,8 +37,8 @@ go();
 // }
 
 // function go() {
-//   const dog = 'sunny';
-//   logDog('sunny');
+//   const dog = 'sunny'; 
+//   logDog(dog);
 // }
 
 // go();
@@ -48,8 +54,3 @@ function sayHi(name) {
 
 
 yell();
-
-// global variables
-
-
-const first = 'wes';
