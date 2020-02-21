@@ -1,14 +1,14 @@
-// const age = 100;
+const age = 100;
 
-// function go() {
-//   const myAge = 200;
-//   const hair = 'blonde';
-//   console.log(age);
-//   console.log(myAge);
-//   console.log(hair);
-// }
+function go() {
+  const myAge = 200;
+  const hair = 'blonde';
+  console.log(age);
+  console.log(myAge);
+  console.log(hair);
+}
 
-// go();
+go();
 /* eslint-disable*/
 
 // function isCool(name) {
@@ -24,18 +24,18 @@
 // }
 
 
-const dog = 'snickers';
+// const dog = 'snickers';
 
-function logDog(dog) {
-  console.log(dog);
-}
+// function logDog(dog) {
+//   console.log(dog);
+// }
 
-function go() {
-  const dog = 'sunny';
-  logDog('sunny');
-}
+// function go() {
+//   const dog = 'sunny';
+//   logDog('sunny');
+// }
 
-go();
+// go();
 
 function yell() {
   console.log(name.toUpperCase())
@@ -48,3 +48,8 @@ function sayHi(name) {
 
 
 yell();
+
+// global variables
+
+
+const first = 'wes';
