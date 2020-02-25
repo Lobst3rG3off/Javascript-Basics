@@ -13,3 +13,6 @@ function sayHi() {
 }
 
 const add = (a, b) => a + b;
+
+// Javascript will on page load hoist all the function and varible declarations to the top to ensure that if/when called they function 
+
