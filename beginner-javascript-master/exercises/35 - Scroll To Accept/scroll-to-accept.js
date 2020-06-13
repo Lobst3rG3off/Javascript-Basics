@@ -1,7 +1,10 @@
 const terms = document.querySelector('.terms-and-conditions');
 const watch = document.querySelector('.watch');
 
-terms.addEventListener('scroll', function(e) {
-  console.log(e.currentTarget.scrollTop);
-  console.log(e.currentTarget.scrollHeight);
-});
+function obCallback(payload) {
+  console.log(payload[0]);
+}
+
+const ob = new IntersectionObserver(obCallback);
+
+ob.observe(terms.lastElementChild);
