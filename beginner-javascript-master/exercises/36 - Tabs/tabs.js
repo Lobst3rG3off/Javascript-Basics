@@ -5,7 +5,11 @@ const tabButtons = tabs.querySelectorAll('[role="tab"]');
 const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
 
 function handleTabClick(e) {
-  console.log(e.currentTarget);
+  //hide all tab panels
+  
+  //mark all tabs as unsleected
+  //mark the clicked tab as selected
+  //find the associated tab panel and show it.
 }
 
 tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
