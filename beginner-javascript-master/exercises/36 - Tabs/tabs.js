@@ -2,10 +2,9 @@ console.log('ya ya wes we get it.. IT WORKS!');
 
 const tabs = document.querySelector('.tabs');
 const tabButtons = tabs.querySelectorAll('[role="tab"]');
-const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
+const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
 
-function handleTabClick(e) {
-  // hide all tab panels
+const handleTabClick = e => {
   console.log(tabPanels);
   tabPanels.forEach(panel => {
     panel.hidden = true;
@@ -21,10 +20,16 @@ function handleTabClick(e) {
   // find the associated tab panel and show it.
   const { id } = e.currentTarget;
 
-  const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
-  tabPanel.hidden = false;
+  //   method 1
+  //   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+  //   tabPanel.hidden = false;
 
-  //   tabPanels.forEach(element => {});
-}
+  // Method 2 find in the array of tab panels
+  console.log(tabPanels);
+  const tabPanel = tabPanels.find(
+    panel => panel.getAttribute('aria-labelledby') === id
+  );
+  tabPanel.hidden = false;
+};
 
 tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
