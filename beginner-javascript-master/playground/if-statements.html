@@ -9,28 +9,123 @@
 </head>
 
 <body>
-  * empty array
-  * empty object
-  * 1
+
+  <h2>Truthy Values</h2>
   * -10
+  * 1
   * full string
   * a string of "0"
+  * empty array
+  * empty object
+
+
+  <h2>Falsy Values</h2>
   * 0
   * undefined variable
   * Variable set to null
   * a variable set to `"hello" - 10` NaN
   * empty string
 
-  <script>
-
-    function slugify(sentence, lowercase) {
-      let slug = sentence.replace(/\s/g, '-');
+  <script>function slugify(sentence, lowercase) {
+      const slug = sentence.replace(/\s/g, '-');
       if (lowercase) {
         return slug.toLowerCase();
       }
       return slug;
     }
 
+    const name = 'wes';
+    const last = 'bos';
+    if (name === 'scott' || (name === 'scott' && last === 'bos')) {
+      console.log('good name');
+    }
+
+    const isAwesomeName = 'awesome'.includes(name);
+    if (isAwesomeName) {
+      console.log('Super coool name');
+    }
+
+    function nameIsAwesome(name) {
+      return 'awesome'.includes(name);
+    }
+
+    if (nameIsAwesome('wes')) {
+      console.log('cool name wes');
+    }
+
+    const dog = '';
+
+    if (dog) {
+      console.log('You have a dog');
+    } else {
+      console.log('You dont have a dog');
+    }
+
+    const score = -10;
+    if (score) {
+      console.log('There is a score already');
+    } else {
+      console.log('No score yet');
+    }
+
+    // coersion changing one type into another
+
+    // if (!isCool) {
+    //   console.log('you are not cool');
+    // }
+
+    // ternary operators
+    const count = 1;
+    // let word;
+    // if (count === 1) {
+    //   word = 'item'
+    // } else {
+    //   word = 'items'
+    // }
+
+    // 1. condition
+    // @. what do do if true
+    // what do do if false
+    const word = count === 1 ? 'item' : 'items';
+
+    const sentence = `You have ${count} item${count} item${
+      count === 1 ? '' : 's'
+      } in your cart`;
+    console.log(sentence);
+
+    function showAdminBar() {
+      console.log('showing Admin Bar');
+    }
+
+    const isAdmin = true;
+    // isAdmin ? showAdminBar() : null;
+
+    // the AND AND trick
+    function check1() {
+      console.log('Running check 1');
+      return true;
+    }
+    function check2() {
+      console.log('Running check 2');
+      return false;
+    }
+    function check3() {
+      console.log('Running check 3');
+      return true;
+    }
+
+    if (check1() && check2() && check3()) {
+      console.log('all checks passed');
+    } else {
+      console.log('some check failed');
+    }
+
+    isAdmin ? showAdminBar() : null;
+    isAdmin && showAdminBar();
+
+    if (isAdmin) {
+      showAdminBar();
+    }
   </script>
 </body>
 
