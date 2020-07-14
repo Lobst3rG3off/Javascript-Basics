@@ -188,6 +188,32 @@
     person3.first = 'Larry';
     // this will change both objects. spread only works one level deep.
     person3.clothing.shirts = 100;
+
+    const meatInventory = {
+      bacon: 2,
+      sausage: 3,
+      oyster: 10,
+    };
+
+    const veggieInventory = {
+      lettuce: 5,
+      tomatoes: 3,
+      oyster: 15,
+    };
+    const inventory = { ...meatInventory, ...veggieInventory, oysters: 10 };
+
+    function doStuff(data) {
+      data = 'something else';
+      console.log(data);
+    }
+
+    function doStuff2(data) {
+      data.tomatoes = 10000000000;
+      console.log(data);
+    }
+    doStuff2(inventory);
+
+    doStuff(name1);
   </script>
 </body>
 
