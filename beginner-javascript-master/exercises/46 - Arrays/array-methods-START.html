@@ -12,14 +12,26 @@
 
 <body>
   <script>
-    const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
+    const toppings = [
+      'Mushrooms ',
+      'Tomatoes',
+      'Eggs',
+      'Chili',
+      'Lettuce',
+      'Avocado',
+      'Chiles',
+      'Bacon',
+      'Pickles',
+      'Onions',
+      'Cheese',
+    ];
 
     const buns = ['egg', 'wonder', 'brioche'];
 
     const meats = {
       beyond: 10,
       beef: 5,
-      pork: 7
+      pork: 7,
     };
 
     const prices = {
@@ -39,42 +51,98 @@
       { comment: 'I DONT LIKE BURGERS', rating: 1 },
     ];
 
-
     /*
       Static Methods
     */
 
     // Array.of();
+    // creates array using the arguments passed to it.
 
     // Make a function that creates a range from x to y with Array.from();
+    // take an interable and give you and array from that iterable. takes a seconjdary argument knowns as a map function.
+    // handy range function
+    function createRange(start, end) {
+      const range = Array.from({ length: end - start + 1 }, function (item, index) {
+        return index + start;
+      });
+      return range;
+    }
+    const myRange = createRange(3, 734);
+    console.log(myRange);
 
     // Check if the last array you created is really an array with Array.isArray();
+    console.log(Array.isArray(myRange));
 
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
+
+    console.log(Object.entries(meats));
+    console.log(Object.keys(meats));
+    console.log(Object.values(meats));
+
+    Object.entries(meats).forEach(([key, value]) => {
+      // const key = entry[0];
+      // const value = entry[1];
+      // const [key, value] = entry;
+      console.log(key, value);
+    });
 
     /*
       Instance Methods
     */
 
     // Display all bun types with " or " - use join()
-
+    // this will list the elements in an array with whatever word passed to join them
+    console.log(buns.join(' or '));
     // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
+    // put a string into an array seperating it by the passed item.
+    const foodString = 'hot dogs,hamburgers,sausages,corn';
+    console.log(foodString.split(','));
 
     // take the last item off toppings with pop()
+    const lastItem = toppings.pop();
+    console.log(lastItem);
     // add it back with push()
+    toppings.push(lastItem);
+    console.log(toppings);
     // take the first item off toppings with shift()
-    // add it back in with unshift()
-    // Do the last four,but immutable (with spreads and new variables)
+    const firstItem = toppings.shift();
+    console.log(firstItem);
 
+    // add it back in with unshift()
+    toppings.unshift(firstItem);
+    console.log(toppings);
+    // Do the last four,but immutable (with spreads and new variables)
+    let newToppings = toppings.slice(0, toppings.length - 1);
+    console.log(newToppings);
+
+    newToppings = [...newToppings, toppings[toppings.length - 1]];
+    console.log(newToppings);
 
     // Make a copy of the toppings array with slice()
+    const toppingCopy = toppings.slice(0);
+    toppings[0] = 'MushyBoi';
+    console.log(toppingCopy);
     // Make a copy of the toppings array with a spread
+    const toppingCopy2 = [...toppings];
+    console.log(toppingCopy2);
     // take out items 3 to 5 of your new toppings array with splice()
+    toppingCopy.splice(3, 5);
+    console.log(toppingCopy);
     // find the index of Avocado with indexOf() / lastIndexOf()
+    const avoIndex = toppings.indexOf('Avocado');
+    console.log(avoIndex);
     // Check if hot sauce is in the toppings with includes()
+    const hotSauceCheck = toppings.includes('hot sauce');
+    console.log(hotSauceCheck);
     // add it if it's not
-    // flip those toppings around with reverse()
 
+    if (!hotSauceCheck) {
+      toppings.push('Hot Sauce');
+    }
+    console.log(toppings);
+    // flip those toppings around with reverse()
+    const reversedToppings = [...toppings.reverse()];
+    console.log(reversedToppings);
     /*
       Callback Methods
     */
@@ -93,7 +161,6 @@
     /*
       Looping Methods (next)
     */
-
   </script>
 </body>
 
