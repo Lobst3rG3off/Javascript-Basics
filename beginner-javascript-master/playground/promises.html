@@ -7,14 +7,19 @@
 </head>
 <body>
     <script>
-        function makePizza() {
+        function makePizza(toppings) {
           const pizzaPromise = new Promise(function(resolve, reject) {
             // when you are ready you can resolve the promise
-            resolve('🍕');
+            resolve(`Here is your pizza 🍕 with the toppings ${toppings.join('')}`);
             // if something went wrong you can reject the promise
           });
           return pizzaPromise;
         }
-    </script>
+
+        const pepperoniPromise = makePizza(['pepperoni']);
+        const canadianPromise = makePizza(['pepperoni', 'mushrooms', 'onions']);
+
+        console.table(pepperoniPromise, canadianPromise);
+            </script>
 </body>
 </html>
